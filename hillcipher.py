@@ -8,8 +8,12 @@ def getKeyMatrix(key):
         for j in range(3):
             keyMatrix[i][j] = ord(key[k]) % 65
             k += 1
+    print("The key matrix is:", keyMatrix)
    
 def encrypt(messageVector):
+    print("\nMessage Vector:")
+    for row in messageVector:
+        print(row)
     for i in range(3):
         for j in range(1):
             cipherMatrix[i][j] = 0
@@ -21,7 +25,7 @@ def encrypt(messageVector):
 def HillCipher(message, key):
     while len(message) % 3 != 0:
         message += 'X'
-    
+        
     getKeyMatrix(key)
 
     CipherText = []
@@ -38,7 +42,7 @@ def HillCipher(message, key):
 
 def main():
     message = input("Enter the message: ") 
-    key = "UDAYYXYZAB"
+    key = "UDAYYXYZA"
     HillCipher(message, key)
 
 if __name__ == "__main__":
