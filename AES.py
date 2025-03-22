@@ -80,7 +80,7 @@ if __name__ == "__main__":
     print("=" * 45)
     result = demonstrate_aes_steps()
     
-    # Sample for verification (if needed)
+    # Sample for verification 
     expected_after_shift_rows = [
         [0xd4, 0xe0, 0xb8, 0x1e],
         [0x27, 0xbf, 0xb4, 0x41],
